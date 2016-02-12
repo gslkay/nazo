@@ -1,3 +1,4 @@
+//ファイルアップロード
 <?php
 	$count = count($_FILES['upfile']['name']);
 	for($i = 0; $i < $count; $i++){
@@ -16,7 +17,10 @@
 			print("<h1>false</h1><br>");
 		}
 	}
-
+//ファイルチェックメソッド
+//第一引数にファイル名、第二引数に返す値のスイッチ
+//0の場合～リストと照らし合わせるリスト内にあればtrue,リストになければfalse
+//1の場合～拡張子を返す
 	function file_check($file, $num){
 		static $file_list = array('jpg', 'png');
 		$path = pathinfo($file);
