@@ -1,4 +1,4 @@
-//ファイルアップロード
+<!--ファイルアップロード-->
 <?php
 	$count = count($_FILES['upfile']['name']);
 	for($i = 0; $i < $count; $i++){
