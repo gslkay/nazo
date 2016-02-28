@@ -8,7 +8,7 @@
 		<?php
 
 		require_once 'control/File_prosses.php';
-		$a = new cFile;
+		$a = new cFile();
 
 		$i = 0;
 
