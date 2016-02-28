@@ -1,7 +1,7 @@
-<!--ƒtƒ@ƒCƒ‹ƒAƒbƒvƒ[ƒh-->
+<!--ãƒ•ã‚¡ã‚¤ãƒ«ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰-->
 <?php
 	require_once 'File_prosses.php';
-	$a = new cFile;
+	$a = new cFile();
 
 	$count = count($_FILES['upfile']['name']);
 
@@ -11,16 +11,16 @@
 		$uploadfile = "../file/" . date('Ymd_H-i-s')."_" . $i .".". $a->file_check($name, 1);
 
 		if($a->file_check($name, 0)){
-			//ƒAƒbƒvƒ[ƒhˆ—
+			//ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰å‡¦ç†
 			if(move_uploaded_file(@$_FILES['upfile']['tmp_name'][$i], $uploadfile)){
 				print("<h1>success</h1><br>");
 			}
-			//ƒAƒbƒvƒ[ƒh¸”s
+			//ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰å¤±æ•—
 			else{
 				print("<h1>false0</h1><br>");
 			}
 		}
-		//ƒAƒbƒvƒ[ƒh‚Å‚«‚È‚¢ƒtƒ@ƒCƒ‹
+		//ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã§ããªã„ãƒ•ã‚¡ã‚¤ãƒ«
 		else{
 			print("<h1>false1</h1><br>");
 		}
